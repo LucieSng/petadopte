@@ -1,8 +1,22 @@
+// import { useState } from "react";
+  
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Research from "./components/research";
+import Homepage from "./pages/Homepage";
+import Adopte from "./pages/Adopte";
+  import Research from "./components/research";
+
 
 function App() {
-  return <Research />;
+  return (
+    <Research />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/Adopte" element={<Adopte />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
