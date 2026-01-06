@@ -1,3 +1,7 @@
 export default function Don() {
-  return <main></main>;
+  return (
+    <main>
+      <div>Page de don</div>
+    </main>
+  );
 }
