@@ -12,7 +12,7 @@ export default function CtaBecomeVolunteer() {
       <div>
         <button
           onClick={navigate}
-          className="bg-blue-500 hover:bg-blue-700 hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer"
+          className="text-black font-medium py-2 px-4 cursor-pointer"
         >
           Devenir bénévole
         </button>
