@@ -1,4 +1,4 @@
-export default function Research() {
+export default function Search() {
   function handleSubmit(e) {
     e.preventDefault();
 
