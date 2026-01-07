@@ -3,13 +3,16 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import HomePage from "./pages/Homepage";
 
 function App() {
   return (
     <div>
       <Router>
-        <Routes></Routes>
         <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
       </Router>
     </div>
   );

@@ -1,3 +1,3 @@
-export default function Adopte() {
+export default function Adopt() {
   return <main></main>;
 }
