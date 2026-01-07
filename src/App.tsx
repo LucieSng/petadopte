@@ -3,9 +3,7 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
-import AdoptPage from "./pages/AdoptPage";
-import DonationPage from "./pages/DonationPage";
-import CtaDonation from "./components/CtaDonation";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -13,10 +11,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/AdoptPage" element={<AdoptPage />} />
-          <Route path="/DonationPage" element={<DonationPage />} />
         </Routes>
-        <CtaDonation />
+        <Navbar />
       </Router>
     </div>
   );
