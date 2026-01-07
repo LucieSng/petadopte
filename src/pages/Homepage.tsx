@@ -1,10 +1,11 @@
 // import { useNavigate } from "react-router-dom";
-
-import Research from "../components/research";
+import Search from "../components/Search";
+import HomeImage from "../components/HomeImage";
 export default function Homepage() {
   return (
     <main>
-      <Research />
+      <HomeImage></HomeImage>
+      <Search></Search>
     </main>
   );
 }
