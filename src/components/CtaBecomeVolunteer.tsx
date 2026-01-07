@@ -8,15 +8,11 @@ export default function CtaBecomeVolunteer() {
   };
 
   return (
-    <main>
-      <div>
-        <button
-          onClick={navigate}
-          className="text-black font-medium py-2 px-4 cursor-pointer"
-        >
-          Devenir bénévole
-        </button>
-      </div>
-    </main>
+    <button
+      onClick={navigate}
+      className="text-black font-medium py-2 pl-0 pr-4 cursor-pointer"
+    >
+      Devenir bénévole
+    </button>
   );
 }

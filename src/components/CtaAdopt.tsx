@@ -12,7 +12,7 @@ export default function CtaAdopt() {
       <div>
         <button
           onClick={navigate}
-          className="text-black font-medium py-2 px-4 cursor-pointer"
+          className="text-black font-medium py-2 gap-2 cursor-pointer"
         >
           J'adopte
         </button>
