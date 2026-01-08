@@ -1,4 +1,25 @@
+import { useNavigate } from "react-router-dom";
+
 export default function ImageGallery() {
+  function CtaAdopt() {
+    const nav = useNavigate();
+    const navigate = () => {
+      nav("/Adopt");
+    };
+
+    return (
+      <main>
+        <div>
+          <button
+            onClick={navigate}
+            className="bg-[#333] hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer"
+          >
+            Voir tous les animaux
+          </button>
+        </div>
+      </main>
+    );
+  }
   return (
     <div id="petAdopte">
       <div id="text" className="text-center">
@@ -47,6 +68,7 @@ export default function ImageGallery() {
           style={{ backgroundImage: "url('/PetiteImage4.jpg')" }}
         ></div>
       </div>
+      <div className="text-center"> {CtaAdopt()}</div>
     </div>
   );
 }
