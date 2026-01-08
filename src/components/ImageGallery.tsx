@@ -55,3 +55,6 @@ export default function ImageGallery() {
     </div>
   );
 }
+
+// Ajouter le bouton "Voir tous les animaux"
+// Renommer les id
