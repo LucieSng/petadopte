@@ -4,7 +4,7 @@ export default function ImageGallery() {
   function CtaAdopt() {
     const nav = useNavigate();
     const navigate = () => {
-      nav("/Adopt");
+      nav("/AdoptPage");
     };
 
     return (
@@ -72,8 +72,6 @@ export default function ImageGallery() {
     </div>
   );
 }
-
-// Ajouter le bouton "Voir tous les animaux"
 
 // Possibilité de stocker le className dans une variable pour les petites et grandes images afin de ne pas avoir à le réécrire à chaque fois
 
