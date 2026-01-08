@@ -10,7 +10,7 @@ const ContainerCards = () => {
         Adopter un animal est un engagement sérieux et à long terme. Voici notre
         processus d'adoption en quelques étapes simples.
       </h2>
-      <div className="flex mb-4">
+      <div className="flex mb-4 gap-4">
         <div className="w-1/4">
           <Cards
             emoji={"🔍​"}
