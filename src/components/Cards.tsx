@@ -9,10 +9,12 @@ interface PropsCards {
 
 const Cards = (props: PropsCards) => {
   return (
-    <div className="props">
-      {props.emoji}
-      {props.title}
-      {props.description}
+    <div className="max-w-sm rounded overflow-hidden shadow-lg flex mb-4 gap-8">
+      <div className="px-6 py-4">
+        {props.emoji}
+        {props.title}
+        {props.description}
+      </div>
     </div>
   );
 };
