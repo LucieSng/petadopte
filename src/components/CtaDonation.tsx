@@ -1,10 +1,10 @@
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
-export default function CtaDon() {
+export default function CtaDonation() {
   const nav = useNavigate();
   const navigate = () => {
-    nav("/DonPage");
+    nav("/DonationPage");
   };
 
   return (
@@ -12,9 +12,9 @@ export default function CtaDon() {
       <div>
         <button
           onClick={navigate}
-          className="bg-blue-500 hover:bg-blue-700 hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer"
+          className="bg-[#d65645] hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer"
         >
-          Faire un don
+          Faire un don 🫶​
         </button>
       </div>
     </main>

@@ -2,21 +2,17 @@
 
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Homepage from "./pages/Homepage";
-import Adopte from "./pages/Adopte";
-import DonPage from "./pages/DonPage";
-import CtaDon from "./components/CtaDon";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/Homepage";
 
 function App() {
   return (
     <div>
       <Router>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/Adopte" element={<Adopte />} />
-          <Route path="/DonPage" element={<DonPage />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
-        <CtaDon />
       </Router>
     </div>
   );
