@@ -12,11 +12,6 @@ export default function Homepage() {
       <HomeImage></HomeImage>
       <Search></Search>
       <ImageGallery></ImageGallery>
-
-      <ContainerCards />
-
-      <ChangeLife></ChangeLife>
-
       <ContainerCards />
       <ChangeLife></ChangeLife>
     </main>
