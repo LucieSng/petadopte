@@ -3,8 +3,8 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import HomePage from "./pages/Homepage";
-import ContainerCards from "./components/ContainerCards";
+import HomePage from "./pages/HomePage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
-        <ContainerCards />
+        <Footer />
       </Router>
     </div>
   );
