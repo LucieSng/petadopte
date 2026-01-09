@@ -4,7 +4,6 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import ContainerCards from "./components/ContainerCards";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
-        <ContainerCards />
       </Router>
     </div>
   );
