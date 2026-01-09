@@ -1,18 +1,16 @@
 const Footer = () => {
   return (
     <footer className="bg-[#333]">
-      <div className="mx-auto w-full max-w-screen-xl">
+      <div className="mx-auto w-full max-w-screen-xl text-white">
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-heading uppercase">
+            <h2 className="text-[#d65645] mb-6 text-sm font-semibold text-heading uppercase">
               ADAOPTE
             </h2>
             <ul className="text-body font-medium">
               <li className="mb-4">
-                <a href="#" className=" hover:underline">
-                  Notre mission est de trouver des foyers aimants pour chaque
-                  animal abandonné et de promouvoir le bien-être animal.
-                </a>
+                Notre mission est de trouver des foyers aimants pour chaque
+                animal abandonné et de promouvoir le bien-être animal.
               </li>
               <li className="mb-4">
                 <div className="flex mt-4 sm:justify-left md:mt-0 space-x-2 rtl:space-x-reverse">
@@ -93,7 +91,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-heading uppercase">
+            <h2 className="text-[#d65645] mb-6 text-sm font-semibold text-heading uppercase">
               Informations utiles
             </h2>
             <ul className="text-body font-medium">
@@ -120,27 +118,22 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-heading uppercase">
+            <h2 className="text-[#d65645] mb-6 text-sm font-semibold text-heading uppercase">
               Contact
             </h2>
             <ul className="text-body font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  <p>116 Rue du Faubourg Saint-Martin</p>
-                  <p>75010 Paris, France</p>
-                  <p>Email: contact@adaopte.fr</p>
-                  <p>Tél: +33 1 23 45 67 89</p>
-                </a>
+                <p>116 Rue du Faubourg Saint-Martin</p>
+                <p>75010 Paris, France</p>
+                <p>Email: contact@adaopte.fr</p>
+                <p>Tél: +33 1 23 45 67 89</p>
               </li>
             </ul>
           </div>
         </div>
         <hr className="my-6 border-default sm:mx-auto lg:my-8" />
-        <span className="block text-sm text-body sm:text-center">
-          © 2025{" "}
-          <a href="https://flowbite.com/" class="hover:underline">
-            Adaopte Tous droits réservés.
-          </a>
+        <span className="block text-sm text-body sm:text-center pb-8">
+          © 2025 Adaopte. Tous droits réservés.
           <p>
             Ce site a été développé dans le cadre d'un projet pour ADA Tech
             School.
