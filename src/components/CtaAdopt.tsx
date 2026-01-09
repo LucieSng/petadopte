@@ -1,7 +1,14 @@
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
-export default function CtaAdopt() {
+// Je type mes props
+
+interface PropsButtonAdopt {
+  text: string;
+  className: string;
+}
+
+export default function CtaAdopt(props: PropsButtonAdopt) {
   const nav = useNavigate();
   const navigate = () => {
     nav("/AdoptPage");
@@ -12,9 +19,11 @@ export default function CtaAdopt() {
       <div>
         <button
           onClick={navigate}
-          className="text-black font-medium py-2 gap-2 cursor-pointer"
+          className={props.className}
+          //"text-black font-medium py-2 gap-2 cursor-pointer"
         >
-          J'adopte
+          {props.text}
+          {/* J'adopte */}
         </button>
       </div>
     </main>
