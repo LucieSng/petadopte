@@ -33,7 +33,11 @@ export default function CardsPet({ pet }: CardsPetProps) {
 
         <p className="text-sm text-gray-500 mt-1">{pet.city}</p>
 
-        <p className="text-sm mt-3">{pet.description}</p>
+        <p className="text-sm mt-3 pb-4">{pet.description}</p>
+
+        <button className="bg-[#333] hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer ">
+          Rencontrer
+        </button>
       </div>
     </div>
   );
