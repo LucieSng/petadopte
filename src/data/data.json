@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Charlie",
+    "age": "5 ans",
+    "breed": "Pug",
+    "type": "Chien",
+    "city": "Lille",
+
+    "description": "Charlie est un petit chien calme et affectueux qui adore les balades tranquilles et les caresses sur le canapé.",
+    "imageUrl": "/pet8.jpg"
+  },
+  {
+    "name": "Mia",
+    "age": "2 ans",
+    "breed": "Chat noir et blanc",
+    "type": "Chat",
+    "city": "Strasbourg",
+
+    "description": "Mia est une boule de tendresse curieuse et joueuse, toujours prête à ronronner près de vous.",
+    "imageUrl": "/pet5.jpg"
+  },
+  {
+    "name": "Coco",
+    "age": "1 an",
+    "breed": "Lapin",
+    "type": "Lapin",
+    "city": "Annecy",
+
+    "description": "Coco est un petit lapin plein d’énergie, très doux et parfait pour un foyer aimant et paisible.",
+    "imageUrl": "/pet2.jpg"
+  },
+  {
+    "name": "Rex",
+    "age": "4 ans",
+    "breed": "Chow-chow",
+    "type": "Chien",
+    "city": "Grenoble",
+
+    "description": "Rex est un chien loyal et majestueux, idéal pour une personne douce et patiente qui aime les câlins silencieux.",
+    "imageUrl": "/pet6.jpg"
+  },
+  {
+    "name": "Luna",
+    "age": "3 ans",
+    "breed": "Chat Roux",
+    "type": "Chat",
+    "city": "Bordeaux",
+
+    "description": "Luna adore les coins ensoleillés et les siestes à vos côtés. Elle vous offrira tout l’amour d’un regard félin.",
+    "imageUrl": "/pet3.jpg"
+  },
+  {
+    "name": "Biscuit",
+    "age": "3 mois",
+    "breed": "Cochon d'Inde",
+    "type": "Rongeur",
+    "city": "Tours",
+
+    "description": "Biscuit est tout petit mais plein de vie ! Il aime les légumes croquants et les instants de douceur en famille.",
+    "imageUrl": "/pet4.jpg"
+  },
+  {
+    "name": "Rio",
+    "age": "5 mois",
+    "breed": "Lapin nain brun",
+    "type": "Lapin",
+    "city": "Poitiers",
+
+    "description": "Rio est discret, mignon comme tout, et adore explorer les petits coins de la maison avec délicatesse.",
+    "imageUrl": "/pet7.jpg"
+  },
+  {
+    "name": "Ruby",
+    "age": "2 ans",
+    "breed": "Chien Corgi",
+    "type": "Chien",
+    "city": "Chamonix",
+
+    "description": "Ruby est une boule de neige pleine d’amour ! Elle adore les promenades et les câlins par temps frais.",
+    "imageUrl": "/pet1.jpg"
+  },
+  {
+    "name": "Milo",
+    "age": "3 ans",
+    "breed": "Chat Maine Coon",
+    "type": "Chat",
+    "city": "Lyon",
+    "description": "Milo est un grand chat calme et affectueux. Il aime observer par la fenêtre et faire de longues siestes.",
+    "imageUrl": "/pet9.jpg"
+  },
+  {
+    "name": "Nala",
+    "age": "1 an",
+    "breed": "Chien Shiba Inu",
+    "type": "Chien",
+    "city": "Paris",
+    "description": "Nala est vive et curieuse. Elle adore jouer et apprendre de nouveaux tours.",
+    "imageUrl": "/pet10.jpg"
+  },
+  {
+    "name": "Oscar",
+    "age": "5 ans",
+    "breed": "Lapin nain",
+    "type": "Lapin",
+    "city": "Bordeaux",
+    "description": "Oscar est très doux et sociable. Il aime les caresses et les légumes frais.",
+    "imageUrl": "/pet11.jpg"
+  },
+  {
+    "name": "Blue",
+    "age": "4 ans",
+    "breed": "Chat Européen",
+    "type": "Chat",
+    "city": "Nantes",
+    "description": "Blue est indépendante mais très attachante. Elle vient toujours chercher des câlins le soir.",
+    "imageUrl": "/pet12.jpg"
+  },
+
+  {
+    "name": "Snow",
+    "age": "2 ans",
+    "breed": "Chien Husky",
+    "type": "Chien",
+    "city": "Grenoble",
+    "description": "Snow est énergique et joueur. Il adore courir en plein air et explorer de nouveaux endroits.",
+    "imageUrl": "/pet13.jpg"
+  },
+  {
+    "name": "Plume",
+    "age": "3 ans",
+    "breed": "Chat Ragdoll",
+    "type": "Chat",
+    "city": "Toulouse",
+    "description": "Plume est très douce et calme. Elle aime la compagnie et les moments tranquilles.",
+    "imageUrl": "/pet14.jpg"
+  },
+  {
+    "name": "Caramel",
+    "age": "1 an",
+    "breed": "Cochon d’Inde",
+    "type": "Rongeur",
+    "city": "Rennes",
+    "description": "Caramel est curieux et gourmand. Il reconnaît vite les bruits de nourriture.",
+    "imageUrl": "/pet15.jpg"
+  },
+  {
+    "name": "Rio",
+    "age": "6 ans",
+    "breed": "Perroquet Amazone",
+    "type": "Oiseau",
+    "city": "Marseille",
+    "description": "Rio est très sociable et expressif. Il aime interagir et répéter des sons.",
+    "imageUrl": "/pet16.jpg"
+  }
+]

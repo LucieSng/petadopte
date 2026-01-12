@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
+import AdoptPage from "./pages/AdoptPage";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/HomePage" element={<HomePage />} />
+          <Route path="/AdoptPage" element={<AdoptPage />} />
         </Routes>
         <Footer />
       </Router>
