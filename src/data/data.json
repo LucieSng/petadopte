@@ -144,12 +144,12 @@
     "imageUrl": "/pet15.jpg"
   },
   {
-    "name": "Rio",
+    "name": "Bulle",
     "age": "6 ans",
     "breed": "Perroquet Amazone",
     "type": "Oiseau",
     "city": "Marseille",
-    "description": "Rio est très sociable et expressif. Il aime interagir et répéter des sons.",
+    "description": "Bulle est très sociable et expressif. Il aime interagir et répéter des sons.",
     "imageUrl": "/pet16.jpg"
   }
 ]

@@ -14,6 +14,9 @@ interface CardsPetProps {
 }
 
 export default function CardsPet({ pet }: CardsPetProps) {
+  function printName() {
+    console.log(`Nom de l'animal : ${pet.name}, Type de l'animal ${pet.type} `);
+  }
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden w-70">
       <img
@@ -35,7 +38,10 @@ export default function CardsPet({ pet }: CardsPetProps) {
 
         <p className="text-sm mt-3 pb-4">{pet.description}</p>
 
-        <button className="bg-[#333] hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer ">
+        <button
+          onClick={printName}
+          className="bg-[#333] hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer "
+        >
           Rencontrer
         </button>
       </div>
