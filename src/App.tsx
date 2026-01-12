@@ -1,6 +1,6 @@
 // import { useState } from "react";
 
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
@@ -13,8 +13,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/HomePage" element={<HomePage />} />
-          <Route path="/AdoptPage" element={<AdoptPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/adopte" element={<AdoptPage />} />
         </Routes>
         <Footer />
       </Router>

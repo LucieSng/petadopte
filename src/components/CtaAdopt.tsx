@@ -11,7 +11,7 @@ interface PropsButtonAdopt {
 export default function CtaAdopt(props: PropsButtonAdopt) {
   const nav = useNavigate();
   const navigate = () => {
-    nav("/AdoptPage");
+    nav("/adopte");
   };
 
   return (

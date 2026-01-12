@@ -4,7 +4,7 @@ export default function ImageGallery() {
   function CtaAdopt() {
     const nav = useNavigate();
     const navigate = () => {
-      nav("/AdoptPage");
+      nav("/adopte");
     };
 
     return (

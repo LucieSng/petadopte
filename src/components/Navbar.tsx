@@ -11,7 +11,7 @@ const Navbar = () => {
       </div>
       <div className="flex gap-8 items-center">
         <Link
-          to="/HomePage"
+          to="/"
           className="text-black font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
         >
           <svg
