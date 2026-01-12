@@ -40,7 +40,7 @@ export default function CardsPet({ pet }: CardsPetProps) {
 
         <button
           onClick={printName}
-          className="bg-[#333] hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer "
+          className="bg(--dark-color) hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer "
         >
           Rencontrer
         </button>
