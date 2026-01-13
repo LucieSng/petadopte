@@ -9,10 +9,10 @@ export default function ImageGallery() {
 
     return (
       <main>
-        <div>
+        <div className="p-4">
           <button
             onClick={navigate}
-            className="bg-[#333] hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer"
+            className="bg-[var(--dark-color)] hover:bg-[var(--dark-color)] hover:text-[var(--primary-color)] text-[var(--primary-color)] font-medium py-2 px-4 rounded-full cursor-pointer "
           >
             Voir tous les animaux
           </button>
@@ -21,13 +21,19 @@ export default function ImageGallery() {
     );
   }
   return (
-    <div id="petAdopte">
+    <div id="petAdopte" className="bg-[var(--light-color)] ">
       <div id="text" className="text-center">
-        <h1> Nos animaux à adopter</h1>
+        <h1
+          style={{ fontFamily: "var(--font-family-heading)" }}
+          className="p-4 text-5xl font-semibold"
+        >
+          {" "}
+          Nos animaux à adopter
+        </h1>
 
         <p className="m-10">
           Découvrez en images tous nos animaux qui attendent une famille
-          aimante. Chaque photo raconte une histoire et un espoire.
+          aimante. Chaque photo raconte <br /> une histoire et un espoir.
         </p>
       </div>
       <div id="array" className=" grid grid-cols-4 grid-rows-3 gap-4 p-3 m-4">
