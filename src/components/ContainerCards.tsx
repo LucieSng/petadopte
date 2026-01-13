@@ -4,9 +4,14 @@ import Cards from "../components/Cards";
 
 const ContainerCards = () => {
   return (
-    <div className="text-center">
-      <h1 className="text-black font-medium text-xl mb-2">Comment ça marche</h1>
-      <h2 className="text-[#333] font-regular">
+    <div className="text-center m-16">
+      <h1
+        className="text-(--dark-color) font-semibold text-5xl mb-2"
+        style={{ fontFamily: "var(--font-family-heading)" }}
+      >
+        Comment ça marche
+      </h1>
+      <h2 className="text-(--dark-color) font-regular m-10">
         Adopter un animal est un engagement sérieux et à long terme. Voici notre
         processus d'adoption en quelques étapes simples.
       </h2>

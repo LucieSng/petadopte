@@ -9,11 +9,13 @@ interface PropsCards {
 
 const Cards = (props: PropsCards) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-sm mb-4">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-(--shadow-sm) mb-4">
       <div className="px-6 py-4">
-        {props.emoji}
-        <h1>{props.title}</h1>
-        <p className="text-[#333]">{props.description}</p>
+        <div className="text-3xl p-2">{props.emoji}</div>
+        <h1 className="text-1xl font-bold text-(--dark-color)">
+          {props.title}
+        </h1>
+        <p className="text-(--dark-color) p-4">{props.description}</p>
       </div>
     </div>
   );
