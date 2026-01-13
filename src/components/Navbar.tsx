@@ -5,14 +5,14 @@ import CtaBecomeVolunteer from "../components/CtaBecomeVolunteer";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 bg-[#fefaf7] h-16 flex items-center justify-between px-4 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-(--primary-color) h-16 flex items-center justify-between px-4 shadow-sm">
       <div className="logo">
         <img src="/logo.svg" alt="logo" className="h-10" />
       </div>
       <div className="flex gap-8 items-center">
         <Link
           to="/"
-          className="text-black font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+          className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -24,14 +24,14 @@ const Navbar = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-house-icon lucide-house"
+            className="w-6 h-6"
           >
             <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
             <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           </svg>
           Accueil
         </Link>
-        <div className="flex items-center">
+        <div className="flex items-center text-(--dark-color)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -42,18 +42,20 @@ const Navbar = () => {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="lucide lucide-bone-icon lucide-bone"
+            className="w-6 h-6"
           >
             <path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" />
           </svg>
           <CtaAdopt
             text={"J'adopte"}
-            className={"text-black font-medium py-2 gap-2 cursor-pointer"}
+            className={
+              "text-(--dark-color) font-medium py-2 gap-2 cursor-pointer"
+            }
           />
         </div>
         <Link
           to="/AdoptionGuidePage"
-          className="text-black font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+          className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +67,7 @@ const Navbar = () => {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="lucide lucide-fish-icon lucide-fish"
+            className="w-6 h-6"
           >
             <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" />
             <path d="M18 12v.5" />
@@ -76,7 +78,7 @@ const Navbar = () => {
           </svg>
           Guide d'adoption
         </Link>
-        <div className="flex items-center">
+        <div className="flex items-center text-(--dark-color)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -87,7 +89,7 @@ const Navbar = () => {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="lucide lucide-squirrel-icon lucide-squirrel"
+            className="w-6 h-6"
           >
             <path d="M15.236 22a3 3 0 0 0-2.2-5" />
             <path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4" />
@@ -95,7 +97,9 @@ const Navbar = () => {
             <path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10" />
           </svg>
           <CtaBecomeVolunteer
-            className={"text-black font-medium py-2 pl-0 pr-4 cursor-pointer"}
+            className={
+              "text-(--dark-color) font-medium py-2 pl-0 pr-4 cursor-pointer"
+            }
             text={"Devenir bénévole"}
           />
         </div>
