@@ -26,21 +26,22 @@ export default function CardsPet({ pet }: CardsPetProps) {
       />
 
       <div className="p-4">
-        <h2 className="text-xl font-bold mb-1">{pet.name}</h2>
+        <p className="text-sm">{pet.type}</p>
+        <h2 className="text-xl font-bold mb-1 text-[var(--accent-color)]">
+          {pet.name}
+        </h2>
 
-        <p className="text-sm text-gray-600">
-          {pet.type} • {pet.breed}
+        <p className="text-sm">
+          {pet.breed} - {pet.age}
         </p>
 
-        <p className="text-sm text-gray-600">{pet.age}</p>
-
-        <p className="text-sm text-gray-500 mt-1">{pet.city}</p>
+        <p className="text-sm mt-1">{pet.city}</p>
 
         <p className="text-sm mt-3 pb-4">{pet.description}</p>
 
         <button
           onClick={printName}
-          className="bg(--dark-color) hover:bg-[#333] hover:text-white text-white font-medium py-2 px-4 rounded-full cursor-pointer "
+          className="bg-(--dark-color) hover:bg-[var(--dark-color)] hover:text-[var(--primary-color)] text-[var(--primary-color)] font-medium py-2 px-4 rounded-full cursor-pointer "
         >
           Rencontrer
         </button>
