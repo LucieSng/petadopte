@@ -10,3 +10,5 @@ export default function PetsListCards() {
     </div>
   );
 }
+// Va regarder l'URL et filtre en fonction des paramètres de celui-ci.
+// Si l'URL a des paramètres changé tu filtres et sinon fais map classiquement.
