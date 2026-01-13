@@ -1,28 +1,46 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import "tailwindcss";
+
 
 @theme {
     --primary-color: #fffaf7;
+    /*Blanc*/
     --secondary-color: #ff6d38;
+    /*Orange*/
     --accent-color: #7a78ff;
+    /*Violet*/
     --heading-color: #333;
+    /*Gris*/
     --light-color: #f9f9f9;
+    /*Gris clair*/
     --dark-color: #333;
+    /*Gris*/
 
     --btn-primary-bg: #333;
+    /*Gris*/
     --btn-secondary-bg: #e74c3c;
+    /*Orange*/
     --btn-accent-bg: #00a652;
+    /*Vert*/
     --btn-primary-hover-bg: #8584ff;
+    /*Violet*/
     --btn-secondary-hover-bg: #333;
+    /*Gris*/
 
     --font-family-heading: 'Amatic SC', sans-serif;
     --border-radius: 8px;
 
     --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /**/
     --shadow-md: 0 3px 10px rgba(0, 0, 0, 0.1);
+    /**/
     --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /**/
     --shadow-xl: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /**/
 
     --section-margin: 2rem 0;
+    /**/
     --container-width: 90%;
+    /**/
 }

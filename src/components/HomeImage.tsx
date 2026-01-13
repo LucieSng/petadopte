@@ -8,7 +8,7 @@ export default function HomeImage() {
       className="h-screen bg-cover bg-center "
       style={{ backgroundImage: "url('/background.jpg')" }}
     >
-      <div className="pt-60 text-center text-white">
+      <div className="pt-60 text-center  text-[var(--primary-color)]">
         <h1> Donnons-leur autant qu'ils nous apportent</h1>
         <br />
         <p>
