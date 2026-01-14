@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import pets from "../data/data.json";
 import CardsPet from "./CardsPet";
+import Search from "./Search";
 
 export default function PetsListCards() {
   // 1️⃣ Va regarder l'URL et filtre en fonction des paramètres de celui-ci.
@@ -33,12 +34,13 @@ export default function PetsListCards() {
 
   // 3️⃣ Map classiquement
   return (
-    <div className="grid grid-cols-4 gap-4 m-4">
-      {petsToDisplay.map((pet) => (
-        <CardsPet key={pet.name} pet={pet} />
-      ))}
+    <div>
+      <Search></Search>
+      <div className="grid grid-cols-4 gap-4 m-4">
+        {petsToDisplay.map((pet) => (
+          <CardsPet key={pet.name} pet={pet} />
+        ))}
+      </div>
     </div>
   );
 }
-
-// /adopte?type=cat&city=Lyon

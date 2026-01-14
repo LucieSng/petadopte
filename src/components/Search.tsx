@@ -50,10 +50,11 @@ export default function Search() {
             className="h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-black "
           >
             <option value="">Pas de préférence</option>
-            <option value="dog">Chien</option>
-            <option value="cat">Chat</option>
-            <option value="rodent">Rongeur</option>
-            <option value="rabbit">Lapin</option>
+            <option value="Chien">Chien</option>
+            <option value="Chat">Chat</option>
+            <option value="Rongeur">Rongeur</option>
+            <option value="Lapin">Lapin</option>
+            <option value="Oiseau">Oiseau</option>
           </select>
         </div>
 
