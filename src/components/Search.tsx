@@ -18,15 +18,15 @@ export default function Search() {
 
     // 5️⃣ Récupération explicite des champs (avec cast TypeScript)
     const type = formData.get("type") as string | null;
-    const location = formData.get("location") as string | null;
+    const city = formData.get("city") as string | null;
 
     // 6️⃣ Ajout des paramètres UNIQUEMENT s’ils existent
     if (type && type.trim() !== "") {
       searchParams.set("type", type);
     }
 
-    if (location && location.trim() !== "") {
-      searchParams.set("location", location);
+    if (city && city.trim() !== "") {
+      searchParams.set("city", city);
     }
 
     // 7️⃣ Transformation en query string
@@ -61,7 +61,7 @@ export default function Search() {
         <div className="flex flex-col flex-1">
           <label className="text-sm font-medium mb-1">Localisation</label>
           <input
-            name="location"
+            name="city"
             type="text"
             placeholder="Votre ville"
             className="h-11 rounded-md border border-[var(--dark-color)] px-3 focus:outline-none focus:ring-2 focus:ring-[var(--dark-color)]"
