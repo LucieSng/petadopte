@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="logo">
         <img src="/logo.svg" alt="logo" className="h-10" />
       </div>
-      <ul id="menu-desktop" className="hidden md:flex gap-8 items-center">
+      <ul id="menu-desktop" className="hidden lg:flex gap-8 items-center">
         <li>
           <Link
             to="/"
@@ -123,7 +123,7 @@ const Navbar = () => {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           id="btn-open-menu"
-          className="focus md:hidden text-(--secondary-color)"
+          className="focus lg:hidden text-(--secondary-color) cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -144,11 +144,14 @@ const Navbar = () => {
         </button>
       </div>
       {menuOpen && (
-        <ul className="md:hidden absolute top-16 left-0 right-0 bg-(--secondary-color) flex h-100">
+        <ul
+          id="menu-mobile"
+          className="lg:hidden absolute border-t top-16 left-0 right-0 bg-(--primary-color) pt-4 h-60 px-4 flex flex-col items-start"
+        >
           <li>
             <Link
               to="/"
-              className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+              className="text-(--dark-color) font-medium py-2 cursor-pointer flex items-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +198,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/AdoptionGuidePage"
-              className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+              className="text-(--dark-color) font-medium py-2 cursor-pointer flex items-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +250,7 @@ const Navbar = () => {
             </div>
           </li>
           <li>
-            <div className="donation">
+            <div className="pt-2">
               <CtaDonation />
             </div>
           </li>
