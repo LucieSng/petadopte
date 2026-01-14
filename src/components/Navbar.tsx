@@ -123,7 +123,7 @@ const Navbar = () => {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           id="btn-open-menu"
-          className="focus text-(--secondary-color)"
+          className="focus md:hidden text-(--secondary-color)"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ const Navbar = () => {
         </button>
       </div>
       {menuOpen && (
-        <ul className="md:hidden absolute top-16 left-0 right-0 bg-(--secondary-color) flex">
+        <ul className="md:hidden absolute top-16 left-0 right-0 bg-(--secondary-color) flex h-100">
           <li>
             <Link
               to="/"
