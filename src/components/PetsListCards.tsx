@@ -35,7 +35,9 @@ export default function PetsListCards() {
   // 3️⃣ Map classiquement
   return (
     <div>
-      <Search></Search>
+      <div className="pt-15 pb-15">
+        <Search></Search>
+      </div>
       <div className="grid grid-cols-4 gap-4 m-4">
         {petsToDisplay.map((pet) => (
           <CardsPet key={pet.name} pet={pet} />

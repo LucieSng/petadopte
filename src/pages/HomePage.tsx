@@ -12,7 +12,9 @@ export default function Homepage() {
       {/* Wrapper relatif pour le positionnement du Search */}
       <div className="relative">
         <HomeImage></HomeImage>
-        <Search></Search>
+        <div className="absolute left-1/2 bottom-0 translate-y-1/2 -translate-x-1/2 z-20 w-full flex justify-center px-4">
+          <Search></Search>
+        </div>
       </div>
       <ImageGallery></ImageGallery>
       <ContainerCards />

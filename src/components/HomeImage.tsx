@@ -12,10 +12,10 @@ export default function HomeImage() {
       />
 
       {/* Contenu */}
-      <div className="relative z-10 pt-60 text-center text-[var(--primary-color)]">
+      <div className="relative z-10 pt-20 text-center text-[var(--primary-color)] md:pt-45">
         <h1
           style={{ fontFamily: "var(--font-family-heading)" }}
-          className="text-6xl font-semibold"
+          className="text-4xl font-semibold md:text-6xl "
         >
           Donnons-leur autant qu'ils nous apportent
         </h1>
@@ -25,7 +25,7 @@ export default function HomeImage() {
         <p className="p-4">
           Chaque jour, des milliers d'animaux attendent une famille aimante.
           Trouvez votre <br />
-          compagnon idéal parmi nos animaux disponibles à l'adoption
+          compagnon idéal parmi nos animaux disponibles à l'adoption.
         </p>
       </div>
     </div>
