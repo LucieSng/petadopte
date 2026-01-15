@@ -54,7 +54,7 @@ const Navbar = () => {
             <CtaAdopt
               text={"J'adopte"}
               className={
-                "text-(--dark-color) font-medium py-2 gap-2 cursor-pointer"
+                "text-(--dark-color) font-medium py-2 px-2 cursor-pointer"
               }
             />
           </div>
@@ -62,7 +62,7 @@ const Navbar = () => {
         <li>
           <Link
             to="/AdoptionGuidePage"
-            className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+            className="text-(--dark-color) font-medium py-2 px-2 cursor-pointer flex items-center gap-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ const Navbar = () => {
             </svg>
             <CtaBecomeVolunteer
               className={
-                "text-(--dark-color) font-medium py-2 pl-0 pr-4 cursor-pointer"
+                "text-(--dark-color) font-medium py-2 px-2 cursor-pointer"
               }
               text={"Devenir bénévole"}
             />
@@ -172,7 +172,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <div className="flex items-center text-(--dark-color)">
+            <div className="flex items-center gap-2 text-(--dark-color)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -243,7 +243,7 @@ const Navbar = () => {
               </svg>
               <CtaBecomeVolunteer
                 className={
-                  "text-(--dark-color) font-medium py-2 pl-0 pr-4 cursor-pointer"
+                  "text-(--dark-color) font-medium py-2 px-2 cursor-pointer"
                 }
                 text={"Devenir bénévole"}
               />
