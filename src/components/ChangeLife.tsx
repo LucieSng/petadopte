@@ -20,20 +20,29 @@ export default function ChangeLife() {
         </p>
       </div>
 
-      <div id="button" className="flex justify-center gap-4 m-10">
-        <CtaAdopt
-          text={"Adopter un animal"}
-          className={
-            "bg-[var(--dark-color)] hover:bg-[var(--dark-color)] hover:text-[var(--primary-color)] text-[var(--primary-color)] font-medium py-2 px-4 rounded-full cursor-pointer"
-          }
-        />
-        <CtaDonation></CtaDonation>
-        <CtaBecomeVolunteer
-          className={
-            "bg-[var(--btn-accent-bg)] hover:bg-[var(--dark-color)] hover:text-[var(--primary-color)] text-[var(--primary-color)] font-medium py-2 px-4 rounded-full cursor-pointer"
-          }
-          text={"Devenir bénévole"}
-        />
+      <div
+        id="button"
+        className="flex flex-col sm:flex-row justify-center gap-4 m-10"
+      >
+        <div className="md:w-5">
+          <CtaAdopt
+            text={"Adopter un animal"}
+            className={
+              "bg-[var(--dark-color)] hover:bg-[var(--dark-color)] hover:text-[var(--primary-color)] text-[var(--primary-color)] font-medium py-2 px-4 rounded-full cursor-pointer w-full"
+            }
+          />
+        </div>
+        <div className="md:w-60">
+          <CtaDonation></CtaDonation>
+        </div>
+        <div className="md:w-60">
+          <CtaBecomeVolunteer
+            className={
+              "bg-[var(--btn-accent-bg)] hover:bg-[var(--dark-color)] hover:text-[var(--primary-color)] text-[var(--primary-color)] font-medium py-2 px-4 rounded-full cursor-pointer w-full"
+            }
+            text={"Devenir bénévole"}
+          />
+        </div>
       </div>
     </div>
   );

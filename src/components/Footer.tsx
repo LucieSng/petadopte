@@ -117,7 +117,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="w-full my-6 border-t text-gray-400 sm:mx-auto lg:my-8" />
-        <span className="block text-sm text-body sm:text-center pb-8 text-gray-400">
+        <span className="ml-4 block text-sm text-body sm:text-center pb-8 text-gray-400">
           © 2025 Adaopte. Tous droits réservés.
           <p>
             Ce site a été développé dans le cadre d'un projet pour ADA Tech
