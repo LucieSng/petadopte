@@ -24,7 +24,7 @@ export default function ChangeLife() {
         id="button"
         className="flex flex-col sm:flex-row justify-center gap-4 m-10"
       >
-        <div className="md:w-5">
+        <div className="md:w-52">
           <CtaAdopt
             text={"Adopter un animal"}
             className={
@@ -32,10 +32,10 @@ export default function ChangeLife() {
             }
           />
         </div>
-        <div className="md:w-60">
+        <div className="md:w-52">
           <CtaDonation></CtaDonation>
         </div>
-        <div className="md:w-60">
+        <div className="md:w-52">
           <CtaBecomeVolunteer
             className={
               "bg-[var(--btn-accent-bg)] hover:bg-[var(--dark-color)] hover:text-[var(--primary-color)] text-[var(--primary-color)] font-medium py-2 px-4 rounded-full cursor-pointer w-full"
