@@ -20,8 +20,11 @@ export default function ImageGallery() {
       </main>
     );
   }
+
   return (
-    <div id="petAdopte" className="bg-[var(--light-color)] ">
+    // ⬇️ mt-32 ajouté pour laisser la place au Search superposé
+
+    <div id="petAdopte" className=" bg-[var(--light-color)] pt-33 pb-15">
       <div id="text" className="text-center">
         <h1
           style={{ fontFamily: "var(--font-family-heading)" }}
@@ -36,11 +39,13 @@ export default function ImageGallery() {
           aimante. Chaque photo raconte <br /> une histoire et un espoir.
         </p>
       </div>
-      <div id="array" className=" grid grid-cols-4 grid-rows-3 gap-4 p-3 m-4">
+
+      <div id="array" className="grid grid-cols-4 grid-rows-3 gap-4 p-3 m-4">
         <div
           className="row-span-2 h-screen bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/GrandeImage1.jpg')" }}
         ></div>
+
         <div
           className="bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/PetiteImage1.jpg')" }}
@@ -50,6 +55,7 @@ export default function ImageGallery() {
           className="row-span-2 h-screen bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/GrandeImage2.jpg')" }}
         ></div>
+
         <div
           className="bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/PetiteImage2.jpg')" }}
@@ -59,6 +65,7 @@ export default function ImageGallery() {
           className="row-span-2 h-screen bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/GrandeImage3.jpg')" }}
         ></div>
+
         <div
           className="row-span-2 h-screen bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/GrandeImage4.jpg')" }}
@@ -74,7 +81,8 @@ export default function ImageGallery() {
           style={{ backgroundImage: "url('/PetiteImage4.jpg')" }}
         ></div>
       </div>
-      <div className="text-center"> {CtaAdopt()}</div>
+
+      <div className="text-center">{CtaAdopt()}</div>
     </div>
   );
 }

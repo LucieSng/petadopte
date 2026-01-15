@@ -37,18 +37,18 @@ export default function Search() {
   }
 
   return (
-    <div className="w-full flex justify-center px-4">
+    <div className="absolute left-1/2 bottom-0 translate-y-1/2 -translate-x-1/2 z-20 w-full flex justify-center px-4">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-5xl bg-[var(--primary-color)] rounded-xl shadow-lg p-6 flex flex-col gap-4 md:flex-row md:items-end md:gap-6"
+        className="w-full max-w-5xl bg-white rounded-xl shadow-lg p-6 flex flex-col gap-4 md:flex-row md:items-end md:gap-6"
       >
         {/* Type d'animal */}
         <div className="flex flex-col flex-1">
-          <label className="text-sm font-medium  mb-1">Type d’animal</label>
+          <label className="text-sm font-medium mb-1">Type d’animal</label>
           <select
             aria-label="type"
             name="type"
-            className="h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-black "
+            className="h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-black"
           >
             <option value="">Pas de préférence</option>
             <option value="Chien">Chien</option>
@@ -73,7 +73,7 @@ export default function Search() {
         {/* Bouton */}
         <button
           type="submit"
-          className="h-11 px-8 rounded-md bg-[var(--dark-color)] text-[var(--light-color)] font-medium hover:bg-[var(--dark-color)]transition-colors"
+          className="h-11 px-8 rounded-md bg-[var(--dark-color)] text-[var(--light-color)] font-medium hover:bg-[var(--dark-color)] transition-colors"
         >
           Rechercher
         </button>
