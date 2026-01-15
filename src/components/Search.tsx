@@ -1,8 +1,5 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
-
-interface SearchProps {
-  showReset?: boolean;
-}
+import type { SearchProps } from "../types/SearchProps";
 
 export default function Search({ showReset = false }: SearchProps) {
   const navigate = useNavigate();

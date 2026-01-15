@@ -1,12 +1,6 @@
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-
-// Je type mes props
-
-interface PropsButtonVolunteer {
-  text: string;
-  className: string;
-}
+import type { PropsButtonVolunteer } from "../types/PropsButtonVolunteer";
 
 export default function CtaBecomeVolunteer(props: PropsButtonVolunteer) {
   const nav = useNavigate();

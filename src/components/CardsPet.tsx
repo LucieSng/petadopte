@@ -1,17 +1,4 @@
-interface Pet {
-  name: string;
-  age: string;
-  breed: string;
-  type: string;
-  city: string;
-
-  description: string;
-  imageUrl: string;
-}
-
-interface CardsPetProps {
-  pet: Pet;
-}
+import type { CardsPetProps } from "../types/pet";
 
 export default function CardsPet({ pet }: CardsPetProps) {
   function printName() {

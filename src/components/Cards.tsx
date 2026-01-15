@@ -1,11 +1,7 @@
 // Création du composant enfant
 
 // Je type mes props
-interface PropsCards {
-  emoji: string;
-  title: string;
-  description: string;
-}
+import type { PropsCards } from "../types/PropsCards";
 
 const Cards = (props: PropsCards) => {
   return (
