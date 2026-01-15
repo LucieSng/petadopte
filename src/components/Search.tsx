@@ -46,6 +46,7 @@ export default function Search() {
         <div className="flex flex-col flex-1">
           <label className="text-sm font-medium  mb-1">Type d’animal</label>
           <select
+            aria-label="type"
             name="type"
             className="h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-black "
           >

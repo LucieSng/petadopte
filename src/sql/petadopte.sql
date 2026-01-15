@@ -1,65 +1,63 @@
-CREATE TABLE users (
-    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    first_name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    city VARCHAR(255) NOT NULL,
-    zip_code INT NOT NULL
+CREATE TABLE `pets`(
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL,
+    `type` VARCHAR(100) NOT NULL,
+    `breed` VARCHAR(255) NOT NULL,
+    `age` INT NULL,
+    `location` VARCHAR(255) NOT NULL,
+    `description` TEXT NOT NULL,
+    `picture` VARCHAR(255) NOT NULL,
+    `adopted` BOOLEAN NOT NULL DEFAULT 'DEFAULT FALSE',
+    `shelter_id` VARCHAR(255) NOT NULL
 );
-CREATE TABLE pets (
-    pet_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id BIGINT UNSIGNED NOT NULL,
-    name VARCHAR(255) NOT NULL,
-    type VARCHAR(100) NOT NULL,
-    breed VARCHAR(255),
-    age INT NOT NULL,
-    location VARCHAR(255) NOT NULL,
-    description TEXT,
-    picture VARCHAR(255),
-    adopted BOOLEAN NOT NULL DEFAULT FALSE,
-
-    CONSTRAINT pets_user_fk
-        FOREIGN KEY (user_id)
-        REFERENCES users(id)
-        ON DELETE CASCADE
+CREATE TABLE `volunteers`(
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `availability` VARCHAR(255) NOT NULL,
+    `motivations` TEXT NOT NULL
 );
-CREATE TABLE volunteers (
-    volunteer_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id BIGINT UNSIGNED NOT NULL,
-    availability VARCHAR(255) NOT NULL,
-    motivations TEXT NOT NULL,
-    witness TEXT,
-
-    CONSTRAINT volunteers_user_fk
-        FOREIGN KEY (user_id)
-        REFERENCES users(id)
-        ON DELETE CASCADE
+CREATE TABLE `pet_volunteers`(
+    `id` BIGINT NOT NULL,
+    `pet_id` BIGINT UNSIGNED NOT NULL,
+    `volunteer_id` BIGINT UNSIGNED NOT NULL,
+    PRIMARY KEY(`id`)
 );
-CREATE TABLE pet_volunteer (
-    pet_id BIGINT UNSIGNED NOT NULL,
-    volunteer_id BIGINT UNSIGNED NOT NULL,
-
-    PRIMARY KEY (pet_id, volunteer_id),
-
-    CONSTRAINT pv_pet_fk
-        FOREIGN KEY (pet_id)
-        REFERENCES pets(pet_id)
-        ON DELETE CASCADE,
-
-    CONSTRAINT pv_volunteer_fk
-        FOREIGN KEY (volunteer_id)
-        REFERENCES volunteers(volunteer_id)
-        ON DELETE CASCADE
+CREATE TABLE `donators`(
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `civility` ENUM('M', 'Mme', 'Autre') NOT NULL,
+    `address` VARCHAR(255) NOT NULL,
+    `payment_method` ENUM('') NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `sponsor` BOOLEAN NOT NULL,
+    `pet_id` BIGINT NOT NULL
 );
-CREATE TABLE givers (
-    giver_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id BIGINT UNSIGNED NOT NULL,
-    civility ENUM('M', 'Mme', 'Autre') NOT NULL,
-    address VARCHAR(255) NOT NULL,
-    payment_method VARCHAR(100) NOT NULL,
-
-    CONSTRAINT givers_user_fk
-        FOREIGN KEY (user_id)
-        REFERENCES users(id)
-        ON DELETE CASCADE
+CREATE TABLE `type`(
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `name_type` VARCHAR(255) NOT NULL
 );
+CREATE TABLE `shelter`(
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `city` VARCHAR(255) NOT NULL,
+    `zip_code` BIGINT NOT NULL,
+    `address` VARCHAR(255) NOT NULL,
+    `name` VARCHAR(255) NOT NULL
+);
+CREATE TABLE `shelters_volunteers`(
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `shelter_id` BIGINT NOT NULL,
+    `volonteer_id` BIGINT NOT NULL,
+    `role` ENUM('') NOT NULL
+);
+ALTER TABLE
+    `shelters_volunteers` ADD CONSTRAINT `shelters_volunteers_shelter_id_foreign` FOREIGN KEY(`shelter_id`) REFERENCES `shelter`(`id`);
+ALTER TABLE
+    `donators` ADD CONSTRAINT `donators_pet_id_foreign` FOREIGN KEY(`pet_id`) REFERENCES `pets`(`id`);
+ALTER TABLE
+    `pets` ADD CONSTRAINT `pets_type_foreign` FOREIGN KEY(`type`) REFERENCES `type`(`id`);
+ALTER TABLE
+    `shelters_volunteers` ADD CONSTRAINT `shelters_volunteers_volonteer_id_foreign` FOREIGN KEY(`volonteer_id`) REFERENCES `volunteers`(`id`);
+ALTER TABLE
+    `pet_volunteers` ADD CONSTRAINT `pet_volunteers_pet_id_foreign` FOREIGN KEY(`pet_id`) REFERENCES `pets`(`id`);
+ALTER TABLE
+    `pet_volunteers` ADD CONSTRAINT `pet_volunteers_volunteer_id_foreign` FOREIGN KEY(`volunteer_id`) REFERENCES `volunteers`(`id`);
+ALTER TABLE
+    `pets` ADD CONSTRAINT `pets_shelter_id_foreign` FOREIGN KEY(`shelter_id`) REFERENCES `shelter`(`id`);
