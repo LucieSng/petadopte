@@ -28,7 +28,7 @@ export default function ImageGallery() {
       <div id="text" className="text-center">
         <h1
           style={{ fontFamily: "var(--font-family-heading)" }}
-          className="p-4 text-5xl font-semibold"
+          className="p-4 pt-20 text-5xl font-semibold md:pt-5"
         >
           {" "}
           Nos animaux à adopter
