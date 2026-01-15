@@ -40,7 +40,7 @@ export default function Search({
   const hasActiveFilters = searchParams.get("type") || searchParams.get("city");
 
   return (
-    <div className="w-full px-4 ">
+    <div className="w-full px-4 flex justify-center">
       <div className="w-full max-w-5xl ">
         <form
           onSubmit={handleSubmit}
