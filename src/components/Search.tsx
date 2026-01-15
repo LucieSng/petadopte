@@ -37,7 +37,7 @@ export default function Search() {
   }
 
   return (
-    <div className="absolute left-1/2 bottom-0 translate-y-1/2 -translate-x-1/2 z-20 w-full flex justify-center px-4">
+    <div className="w-full flex justify-center px-4">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-5xl bg-white rounded-xl shadow-lg p-6 flex flex-col gap-4 md:flex-row md:items-end md:gap-6"
