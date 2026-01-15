@@ -44,14 +44,14 @@ export default function Search({ showReset = false }: SearchProps) {
   const hasActiveFilters = searchParams.get("type") || searchParams.get("city");
 
   return (
-    <div className="w-full px-4">
-      <div className="w-full max-w-5xl">
+    <div>
+      <div className="m-3">
         <form
           onSubmit={handleSubmit}
-          className="w-full bg-white rounded-xl shadow-lg p-6 gap-4 grid grid-cols-3 md:items-end md:gap-6"
+          className="w-full bg-white rounded-xl shadow-lg p-6 gap-4  md:grid grid-cols-3 md:items-end md:gap-6"
         >
           {/* Type d'animal */}
-          <div className="flex flex-col flex-1">
+          <div className="mt-5 flex flex-col flex-1">
             <label className="text-sm font-medium mb-1">Type d'animal</label>
             <select
               aria-label="type"
@@ -69,7 +69,7 @@ export default function Search({ showReset = false }: SearchProps) {
           </div>
 
           {/* Localisation */}
-          <div className="flex flex-col flex-1">
+          <div className="mt-5 flex flex-col flex-1">
             <label className="text-sm font-medium mb-1">Localisation</label>
             <input
               name="city"
@@ -83,7 +83,7 @@ export default function Search({ showReset = false }: SearchProps) {
           {/* Bouton Rechercher */}
           <button
             type="submit"
-            className="h-11 px-8 rounded-md bg-[var(--dark-color)] text-[var(--light-color)] font-medium hover:bg-[var(--dark-color)] transition-colors"
+            className="mt-10 h-11 px-8 rounded-md bg-[var(--dark-color)] text-[var(--light-color)] font-medium hover:bg-[var(--dark-color)] transition-colors"
           >
             Rechercher
           </button>
