@@ -1,4 +1,4 @@
-import type { CardsPetProps } from "../types/pet";
+import type { CardsPetProps } from "../types/Pet";
 
 export default function CardsPet({ pet }: CardsPetProps) {
   function printName() {
