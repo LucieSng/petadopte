@@ -1,18 +1,129 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import CtaDonation from "../components/CtaDonation";
 import CtaAdopt from "../components/CtaAdopt";
 import CtaBecomeVolunteer from "../components/CtaBecomeVolunteer";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="sticky top-0 z-50 bg-(--primary-color) h-16 flex items-center justify-between px-4 shadow-sm">
       <div className="logo">
         <img src="/logo.svg" alt="logo" className="h-10" />
       </div>
-      <div className="flex gap-8 items-center">
-        <Link
-          to="/"
-          className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+      <ul id="menu-desktop" className="hidden lg:flex gap-8 items-center">
+        <li>
+          <Link
+            to="/"
+            className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-6 h-6"
+            >
+              <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+              <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            </svg>
+            Accueil
+          </Link>
+        </li>
+        <li>
+          <div className="flex items-center text-(--dark-color)">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="w-6 h-6"
+            >
+              <path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" />
+            </svg>
+            <CtaAdopt
+              text={"J'adopte"}
+              className={
+                "text-(--dark-color) font-medium py-2 gap-2 cursor-pointer"
+              }
+            />
+          </div>
+        </li>
+        <li>
+          <Link
+            to="/AdoptionGuidePage"
+            className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="w-6 h-6"
+            >
+              <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" />
+              <path d="M18 12v.5" />
+              <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86" />
+              <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33" />
+              <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4" />
+              <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98" />
+            </svg>
+            Guide d'adoption
+          </Link>
+        </li>
+        <li>
+          <div className="flex items-center text-(--dark-color)">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="w-6 h-6"
+            >
+              <path d="M15.236 22a3 3 0 0 0-2.2-5" />
+              <path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4" />
+              <path d="M18 13h.01" />
+              <path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10" />
+            </svg>
+            <CtaBecomeVolunteer
+              className={
+                "text-(--dark-color) font-medium py-2 pl-0 pr-4 cursor-pointer"
+              }
+              text={"Devenir bénévole"}
+            />
+          </div>
+        </li>
+        <li>
+          <div className="donation">
+            <CtaDonation />
+          </div>
+        </li>
+      </ul>
+      <div>
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          id="btn-open-menu"
+          className="focus lg:hidden text-(--secondary-color) cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -21,92 +132,130 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="w-6 h-6"
-          >
-            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
-            <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-          </svg>
-          Accueil
-        </Link>
-        <div className="flex items-center text-(--dark-color)">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="w-6 h-6"
+            className="lucide lucide-menu-icon lucide-menu"
           >
-            <path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" />
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
           </svg>
-          <CtaAdopt
-            text={"J'adopte"}
-            className={
-              "text-(--dark-color) font-medium py-2 gap-2 cursor-pointer"
-            }
-          />
-        </div>
-        <Link
-          to="/AdoptionGuidePage"
-          className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+        </button>
+      </div>
+      {menuOpen && (
+        <ul
+          id="menu-mobile"
+          className="lg:hidden absolute border-t top-16 left-0 right-0 bg-(--primary-color) pt-4 h-60 px-4 flex flex-col items-start"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="w-6 h-6"
-          >
-            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" />
-            <path d="M18 12v.5" />
-            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86" />
-            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33" />
-            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4" />
-            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98" />
-          </svg>
-          Guide d'adoption
-        </Link>
-        <div className="flex items-center text-(--dark-color)">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="w-6 h-6"
-          >
-            <path d="M15.236 22a3 3 0 0 0-2.2-5" />
-            <path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4" />
-            <path d="M18 13h.01" />
-            <path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10" />
-          </svg>
-          <CtaBecomeVolunteer
-            className={
-              "text-(--dark-color) font-medium py-2 pl-0 pr-4 cursor-pointer"
-            }
-            text={"Devenir bénévole"}
-          />
-        </div>
-      </div>
-      <div className="donation">
-        <CtaDonation />
-      </div>
+          <li>
+            <Link
+              to="/"
+              className="text-(--dark-color) font-medium py-2 cursor-pointer flex items-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-6 h-6"
+              >
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              </svg>
+              Accueil
+            </Link>
+          </li>
+          <li>
+            <div className="flex items-center text-(--dark-color)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="w-6 h-6"
+              >
+                <path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" />
+              </svg>
+              <CtaAdopt
+                text={"J'adopte"}
+                className={
+                  "text-(--dark-color) font-medium py-2 gap-2 cursor-pointer"
+                }
+              />
+            </div>
+          </li>
+          <li>
+            <Link
+              to="/AdoptionGuidePage"
+              className="text-(--dark-color) font-medium py-2 cursor-pointer flex items-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="w-6 h-6"
+              >
+                <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" />
+                <path d="M18 12v.5" />
+                <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86" />
+                <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33" />
+                <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4" />
+                <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98" />
+              </svg>
+              Guide d'adoption
+            </Link>
+          </li>
+          <li>
+            <div className="flex items-center text-(--dark-color)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="w-6 h-6"
+              >
+                <path d="M15.236 22a3 3 0 0 0-2.2-5" />
+                <path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4" />
+                <path d="M18 13h.01" />
+                <path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10" />
+              </svg>
+              <CtaBecomeVolunteer
+                className={
+                  "text-(--dark-color) font-medium py-2 pl-0 pr-4 cursor-pointer"
+                }
+                text={"Devenir bénévole"}
+              />
+            </div>
+          </li>
+          <li>
+            <div className="pt-2">
+              <CtaDonation />
+            </div>
+          </li>
+        </ul>
+      )}
     </nav>
   );
 };
