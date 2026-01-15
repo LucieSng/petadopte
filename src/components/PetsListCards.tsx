@@ -24,7 +24,7 @@ export default function PetsListCards() {
   return (
     <div>
       <div className="pt-15 pb-15">
-        <Search showReset={true} />
+        <Search showReset={true} resultCount={petsToDisplay.length} />
       </div>
       <div className="grid grid-cols-4 gap-4 m-4">
         {petsToDisplay.map((pet) => (
