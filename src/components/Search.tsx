@@ -1,7 +1,10 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import type { SearchProps } from "../types/SearchProps";
 
-export default function Search({ showReset = false }: SearchProps) {
+export default function Search({
+  showReset = false,
+  resultCount,
+}: SearchProps) {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
@@ -27,29 +30,25 @@ export default function Search({ showReset = false }: SearchProps) {
   }
 
   function handleReset() {
-    // Réinitialise l'URL sans paramètres
     navigate("/adopte");
-
-    // Réinitialise les champs du formulaire
     const form = document.querySelector("form") as HTMLFormElement;
     if (form) {
       form.reset();
     }
   }
 
-  // Vérifie s'il y a des filtres actifs
   const hasActiveFilters = searchParams.get("type") || searchParams.get("city");
 
   return (
-    <div>
-      <div className="m-3">
+    <div className="w-full px-4 flex justify-center">
+      <div className="w-full max-w-5xl ">
         <form
           onSubmit={handleSubmit}
-          className="w-full bg-white rounded-xl shadow-lg p-6 gap-4  md:grid grid-cols-3 md:items-end md:gap-6"
+          className=" p-10 gap-5 w-full bg-white rounded-xl shadow-lg text-center md:grid grid-cols-3 md:items-end "
         >
           {/* Type d'animal */}
-          <div className="mt-5 flex flex-col flex-1">
-            <label className="text-sm font-medium mb-1">Type d'animal</label>
+          <div className="flex flex-col flex-1 ">
+            <label className="text-sm font-medium p-2">Type d'animal</label>
             <select
               aria-label="type"
               name="type"
@@ -66,8 +65,8 @@ export default function Search({ showReset = false }: SearchProps) {
           </div>
 
           {/* Localisation */}
-          <div className="mt-5 flex flex-col flex-1">
-            <label className="text-sm font-medium mb-1">Localisation</label>
+          <div className="flex flex-col flex-1 ">
+            <label className="text-sm font-medium p-2 ">Localisation</label>
             <input
               name="city"
               type="text"
@@ -78,15 +77,26 @@ export default function Search({ showReset = false }: SearchProps) {
           </div>
 
           {/* Bouton Rechercher */}
-          <button
-            type="submit"
-            className="mt-10 h-11 px-8 rounded-md bg-[var(--dark-color)] text-[var(--light-color)] font-medium hover:bg-[var(--dark-color)] transition-colors"
-          >
-            Rechercher
-          </button>
-
-          {/* Bouton Réinitialiser - DANS le formulaire avec type="button" */}
-          <div className="col-start-3 text-right">
+          <div className="pt-5 md:pt-0">
+            <button
+              type="submit"
+              className="h-11 px-8  rounded-md bg-[var(--dark-color)] text-[var(--light-color)] font-medium hover:bg-[var(--dark-color)] transition-colors"
+            >
+              Rechercher
+            </button>
+          </div>
+          <div className="   md:col-start-1">
+            {" "}
+            {/* Affichage du nombre de résultats */}
+            {showReset && resultCount !== undefined && (
+              <div className=" pt-5 md:text-left text-sm md:pt-0">
+                {resultCount}{" "}
+                {resultCount > 1 ? "animaux trouvés" : "animal trouvé"}
+              </div>
+            )}
+          </div>
+          {/* Bouton Réinitialiser */}
+          <div className=" md:col-start-3 md:text-right">
             {showReset && hasActiveFilters && (
               <button
                 type="button"
