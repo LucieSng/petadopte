@@ -40,44 +40,47 @@ export default function ImageGallery() {
         </p>
       </div>
 
-      <div id="array" className="grid grid-cols-4 grid-rows-3 gap-4 p-3 m-4">
+      <div
+        id="array"
+        className="md:grid md:grid-cols-4 md:grid-rows-3 gap-4 md:p-3 md:m-4"
+      >
         <div
-          className="row-span-2 h-screen bg-cover bg-center rounded-md "
+          className="md:row-span-2 md:h-screen bg-cover bg-center rounded-md h-64"
           style={{ backgroundImage: "url('/GrandeImage1.jpg')" }}
         ></div>
 
         <div
-          className="bg-cover bg-center rounded-md "
+          className="hidden md:block bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/PetiteImage1.jpg')" }}
         ></div>
 
         <div
-          className="row-span-2 h-screen bg-cover bg-center rounded-md "
+          className="hidden md:block row-span-2 h-screen bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/GrandeImage2.jpg')" }}
         ></div>
 
         <div
-          className="bg-cover bg-center rounded-md "
+          className="hidden md:block bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/PetiteImage2.jpg')" }}
         ></div>
 
         <div
-          className="row-span-2 h-screen bg-cover bg-center rounded-md "
+          className="hidden md:block row-span-2 h-screen bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/GrandeImage3.jpg')" }}
         ></div>
 
         <div
-          className="row-span-2 h-screen bg-cover bg-center rounded-md "
+          className="hidden md:block row-span-2 h-screen bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/GrandeImage4.jpg')" }}
         ></div>
 
         <div
-          className="bg-cover bg-center rounded-md "
+          className="hidden md:block bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/PetiteImage3.jpg')" }}
         ></div>
 
         <div
-          className="bg-cover bg-center rounded-md "
+          className="hidden md:block bg-cover bg-center rounded-md "
           style={{ backgroundImage: "url('/PetiteImage4.jpg')" }}
         ></div>
       </div>

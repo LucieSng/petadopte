@@ -15,8 +15,8 @@ const ContainerCards = () => {
         Adopter un animal est un engagement sérieux et à long terme. Voici notre
         processus d'adoption en quelques étapes simples.
       </h2>
-      <div className="flex mb-4 gap-4">
-        <div className="w-1/4">
+      <div className="flex flex-col sm:flex-row mb-4 gap-4">
+        <div className="w-full sm:w-1/4">
           <Cards
             emoji={"🔍​"}
             title={"1. Trouver votre compagnon"}
@@ -25,7 +25,7 @@ const ContainerCards = () => {
             }
           />
         </div>
-        <div className="w-1/4">
+        <div className="w-full sm:w-1/4">
           <Cards
             emoji={"​📝​​"}
             title={"2. Remplissez une demande"}
@@ -34,7 +34,7 @@ const ContainerCards = () => {
             }
           />
         </div>
-        <div className="w-1/4">
+        <div className="w-full sm:w-1/4">
           <Cards
             emoji={"👋​​"}
             title={"3. Rencontrez l'animal"}
@@ -43,7 +43,7 @@ const ContainerCards = () => {
             }
           />
         </div>
-        <div className="w-1/4">
+        <div className="w-full sm:w-1/4">
           <Cards
             emoji={"🏠​"}
             title={"4. Bienvenue à la maison"}

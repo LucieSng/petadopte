@@ -6,6 +6,9 @@ import CtaBecomeVolunteer from "../components/CtaBecomeVolunteer";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
   return (
     <nav className="sticky top-0 z-50 bg-(--primary-color) h-16 flex items-center justify-between px-4 shadow-sm">
       <div className="logo">
@@ -54,7 +57,7 @@ const Navbar = () => {
             <CtaAdopt
               text={"J'adopte"}
               className={
-                "text-(--dark-color) font-medium py-2 gap-2 cursor-pointer"
+                "text-(--dark-color) font-medium py-2 px-2 cursor-pointer"
               }
             />
           </div>
@@ -62,7 +65,7 @@ const Navbar = () => {
         <li>
           <Link
             to="/AdoptionGuidePage"
-            className="text-(--dark-color) font-medium py-2 px-4 cursor-pointer flex items-center gap-2"
+            className="text-(--dark-color) font-medium py-2 px-2 cursor-pointer flex items-center gap-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +110,7 @@ const Navbar = () => {
             </svg>
             <CtaBecomeVolunteer
               className={
-                "text-(--dark-color) font-medium py-2 pl-0 pr-4 cursor-pointer"
+                "text-(--dark-color) font-medium py-2 px-2 cursor-pointer"
               }
               text={"Devenir bénévole"}
             />
@@ -151,6 +154,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/"
+              onClick={closeMenu}
               className="text-(--dark-color) font-medium py-2 cursor-pointer flex items-center gap-2"
             >
               <svg
@@ -172,7 +176,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <div className="flex items-center text-(--dark-color)">
+            <div className="flex items-center gap-2 text-(--dark-color)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -187,17 +191,20 @@ const Navbar = () => {
               >
                 <path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" />
               </svg>
-              <CtaAdopt
-                text={"J'adopte"}
-                className={
-                  "text-(--dark-color) font-medium py-2 gap-2 cursor-pointer"
-                }
-              />
+              <div onClick={closeMenu}>
+                <CtaAdopt
+                  text={"J'adopte"}
+                  className={
+                    "text-(--dark-color) font-medium py-2 gap-2 cursor-pointer"
+                  }
+                />
+              </div>
             </div>
           </li>
           <li>
             <Link
               to="/AdoptionGuidePage"
+              onClick={closeMenu}
               className="text-(--dark-color) font-medium py-2 cursor-pointer flex items-center gap-2"
             >
               <svg
@@ -241,16 +248,18 @@ const Navbar = () => {
                 <path d="M18 13h.01" />
                 <path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10" />
               </svg>
-              <CtaBecomeVolunteer
-                className={
-                  "text-(--dark-color) font-medium py-2 pl-0 pr-4 cursor-pointer"
-                }
-                text={"Devenir bénévole"}
-              />
+              <div onClick={closeMenu}>
+                <CtaBecomeVolunteer
+                  className={
+                    "text-(--dark-color) font-medium py-2 px-2 cursor-pointer"
+                  }
+                  text={"Devenir bénévole"}
+                />
+              </div>
             </div>
           </li>
           <li>
-            <div className="pt-2">
+            <div className="pt-2" onClick={closeMenu}>
               <CtaDonation />
             </div>
           </li>

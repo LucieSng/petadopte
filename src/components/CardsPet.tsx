@@ -5,14 +5,14 @@ export default function CardsPet({ pet }: CardsPetProps) {
     console.log(`Nom de l'animal : ${pet.name}, Type de l'animal ${pet.type} `);
   }
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden w-70">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden w-full h-full flex flex-col">
       <img
         src={pet.imageUrl}
         alt={pet.name}
         className="h-48 w-full object-cover"
       />
 
-      <div className="p-4">
+      <div className="p-4 flex flex-col grow">
         <p className="text-sm">{pet.type}</p>
         <h2 className="text-xl font-bold mb-1 text-[var(--accent-color)]">
           {pet.name}
@@ -24,7 +24,7 @@ export default function CardsPet({ pet }: CardsPetProps) {
 
         <p className="text-sm mt-1">{pet.city}</p>
 
-        <p className="text-sm mt-3 pb-4">{pet.description}</p>
+        <p className="text-sm mt-3 pb-4 grow">{pet.description}</p>
 
         <button
           onClick={printName}
