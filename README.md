@@ -1,73 +1,110 @@
-# React + TypeScript + Vite
+🐾 Adaopte
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Adaopte est une application web responsive dédiée à la présentation et à l’adoption d’animaux.
+Elle permet aux utilisateurs de découvrir des animaux disponibles à l’adoption et de filtrer leur recherche selon différents critères.
 
-Currently, two official plugins are available:
+🚀 Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🏠 Page d’accueil
 
-## React Compiler
+Navbar permettant de naviguer entre les différentes pages de l’application
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Section de présentation
 
-## Expanding the ESLint configuration
+Formulaire de recherche d’animaux
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Galerie d’images
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Textes descriptifs
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Footer
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔍 Recherche et filtrage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Formulaire de recherche accessible depuis la page d’accueil
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Filtrage des animaux :
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+par type d’animal (via une liste déroulante)
+
+par localisation
+
+Possibilité de réinitialiser les paramètres du formulaire
+
+Redirection vers la page "J’adopte" avec les résultats filtrés
+
+🐶 Page "J’adopte"
+
+Affichage des animaux sous forme de cartes
+
+Résultats dynamiques en fonction des critères de recherche
+
+Possibilité d’afficher tous les animaux, sans filtre
+
+📱 Responsive
+
+Application développée en mobile-first
+
+Interface adaptée aux mobiles, tablettes et ordinateurs
+
+🗂️ Données
+
+Les données des animaux sont stockées dans un fichier JSON
+
+Chaque animal contient les informations nécessaires à son affichage (type, localisation, image, etc.)
+
+Les filtres sont appliqués côté frontend à partir de ces données
+
+🛠️ Technologies utilisées
+
+⚛️ React (avec Vite)
+
+🟦 TypeScript
+
+🎨 Tailwind CSS
+
+🔀 React Router
+
+📄 Données locales en JSON
+
+📦 Installation et lancement du projet
+
+Cloner le dépôt :
+
+git clone <url-du-repo>
+
+Installer les dépendances :
+
+npm install
+
+Lancer le serveur de développement :
+
+npm run dev
+
+Ouvrir l’application dans le navigateur :
+
+http://localhost:5173
+
+🧭 Navigation
+
+Accueil : présentation générale et formulaire de recherche
+
+J’adopte : liste des animaux disponibles, avec ou sans filtres
+
+Navigation fluide assurée par React Router
+
+✨ Améliorations possibles
+
+Ajout d’une fiche détaillée par animal
+
+Connexion à une API backend
+
+Gestion des favoris
+
+Pagination ou chargement progressif
+
+Authentification utilisateur
+
+👩‍💻 Auteur
+
+Projet réalisé avec React, TypeScript et Tailwind CSS, dans un objectif d’apprentissage et de mise en pratique du développement frontend moderne.
